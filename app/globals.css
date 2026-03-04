@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: italic;
+  src: url("../fonts/Adamathuz\ Bold.ttf");
+}
+
+body{
+  font-family: italic;
+}
+.saveTheDate{
+  font-family: cursive;
+}
