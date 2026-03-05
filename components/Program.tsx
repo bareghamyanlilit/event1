@@ -26,13 +26,13 @@ const ProgramItem = ({ icon, time, title, address }) => {
   const img = getImage(title);
 
   return (
-    <div className={`my-8 flex flex-col items-center text-xl ${title=='Փեսայի տուն'? '-ml-40':''} ${title=='Հարսնացուի տուն'? 'ml-40 -mt-20':''}`}>
+    <div className={`my-8 flex flex-col items-center text-xl ${title=='Փեսայի տուն'? '-ml-40':''} ${title=='Հարսնացուի տուն'? 'ml-40 -mt-20 mb-6 ':''}`}>
       <motion.p {...anim} className="text-4xl">{icon}</motion.p>
       <motion.p {...anim} className="opacity-80">{time}</motion.p>
       <motion.h3 {...anim}>{title}</motion.h3>
       <motion.p {...anim} className="text-sm opacity-80">{address}</motion.p>
 
-      {img && <img src={img} className="my-2 max-w-full rounded" />}
+      {img && <img src={img} className="my-6 max-w-full rounded" />}
 
       <motion.a
         {...anim}
