@@ -23,7 +23,7 @@ export default function Home() {
           backgroundImage: "url('/first copy.jpg')",
         }}
       >
-        <p>Ժենիի և Վլոի հարսանեկան հրավիրատոմս</p>
+        <p className="text-center">Տաթևի և Գոռի <br /> հարսանեկան հրավիրատոմս</p>
         <button
           onClick={() => {
             setIsPlaying(!isPlaying);
@@ -56,7 +56,7 @@ export default function Home() {
           }}
         >
           <h1 className=" text-shadow-2xs  p-2 rounded-2xl text-4xl md:text-7xl">
-            Ժենի <span className="mx-2">և</span> Վլո
+            Տաթև <span className="mx-2">և</span> Գոռ
           </h1>
           <p>Գեղեցիկ օր և մենք կդառնանք ամուսիններ</p>
         </div>

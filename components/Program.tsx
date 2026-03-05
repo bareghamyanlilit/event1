@@ -16,16 +16,6 @@ export function Program() {
   );
 }
 
-const getMapLink = (address) => {
-  if (address === "Գեղակերտ")
-    return "https://maps.app.goo.gl/BDyxceF5CcrehGZR6";
-
-  if (address === "Բանգլադեշ")
-    return "https://www.google.com/maps/place/40.173432,44.451757";
-
-  return `https://www.google.com/maps/search/${address}`;
-};
-
 const getImage = (title) => {
   if (title === "Պսակադրություն") return "/ekexeci.jpg";
   if (title === "Հարսանյաց հանդիսություն") return "/restoran.jpg";
@@ -36,7 +26,7 @@ const ProgramItem = ({ icon, time, title, address }) => {
   const img = getImage(title);
 
   return (
-    <div className="my-8 flex flex-col items-center text-xl">
+    <div className={`my-8 flex flex-col items-center text-xl ${title=='Փեսայի տուն'? '-ml-40':''} ${title=='Հարսնացուի տուն'? 'ml-40 -mt-20':''}`}>
       <motion.p {...anim} className="text-4xl">{icon}</motion.p>
       <motion.p {...anim} className="opacity-80">{time}</motion.p>
       <motion.h3 {...anim}>{title}</motion.h3>
@@ -46,7 +36,7 @@ const ProgramItem = ({ icon, time, title, address }) => {
 
       <motion.a
         {...anim}
-        href={getMapLink(address)}
+        href={`https://www.google.com/maps/search/${address}`}
         target="_blank"
         className="inline-flex items-center gap-2 px-4 py-1.5 text-sm"
       >
@@ -57,7 +47,7 @@ const ProgramItem = ({ icon, time, title, address }) => {
       {title !== "Հարսանյաց հանդիսություն" && (
         <img
           src="https://static.thenounproject.com/png/arrow-icon-5953741-512.png"
-          className="rotate-215 w-20 h-20 opacity-60 my-10"
+          className={` w-20 h-20 opacity-60 my-10 ${title=='Փեսայի տուն'? 'rotate-530':''} ${title=='Հարսնացուի տուն'? 'rotate-240':''} rotate-215`}
         />
       )}
     </div>

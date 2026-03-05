@@ -18,19 +18,19 @@ export const program = [
     icon: <FaHome />,
     time: "12:00",
     title: "Փեսայի տուն",
-    address: "Բանգլադեշ",
+    address: "Երևան",
   },
   {
     icon: <FaHome />,
     time: "13:00",
     title: "Հարսնացուի տուն",
-    address: "Գեղակերտ",
+    address: "Երևան",
   },
   {
     icon: <FaChurch />,
     time: "15:00",
     title: "Պսակադրություն",
-    address: "Սուրբ Գայանե եկեղեցի",
+    address: "Սուրբ Գ․ Լուսավորիչ եկեղեցի",
   },
   {
     icon: <FaUtensils />,
