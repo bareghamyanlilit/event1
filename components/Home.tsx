@@ -9,6 +9,7 @@ import { Program } from "@/components/Program";
 import { TimeBox } from "@/components/TimeBox";
 import { ScrollTop } from "@/components/ScrollTop";
 import { Footer } from "./footer";
+import { GiPlayButton } from "react-icons/gi";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -42,7 +43,7 @@ export default function Home() {
             onClick={() => setIsPlaying(!isPlaying)}
             className="fixed z-10 bg-[#52422e] text-[#fdf8f5] right-4 top-4 rounded-full w-10 h-10 flex justify-center items-center"
           >
-            {isPlaying ? "||" : "▶"}
+            {isPlaying ? "||" : <GiPlayButton />}
           </button>
 
           <MusicPlayer isPlaying={isPlaying} />
